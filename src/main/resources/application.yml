@@ -1,0 +1,17 @@
+xxl:
+  job:
+    admin:
+      # 地址為剛剛配置的調度中心的訪問地址 
+      addresses: http://127.0.0.1:8081/xxl-job-admin
+    executor:
+      # 自定義appName（執行器名稱）
+      appname: xxl-job-executor-santa
+      # ip 可以寫 （程序跑在的機器ip上），也可以不寫
+      ip:
+      port: 9999
+      # 執行器日誌文件存儲路徑
+      logpath: /data/applogs/xxl-job/jobhandler
+      # 設置日誌過期時間  -1表示永不過期 
+      logretentiondays: -1
+      accessToken:
+

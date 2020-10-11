@@ -1,0 +1,22 @@
+# https://taskfile.dev
+
+version: '3'
+
+env:
+  COMPOSE_DOCKER_CLI_BUILD: 1
+  DOCKER_BUILDKIT: 1
+
+tasks:
+  build:
+    cmds:
+      - mvnw clean package -DskipTests
+
+  run:
+    #dir: target
+    cmds:
+      # - task: build
+      # - java -jar demo.jar 
+      - mvnw clean spring-boot:run
+
+
+  
