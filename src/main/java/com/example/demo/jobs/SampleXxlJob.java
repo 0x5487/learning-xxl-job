@@ -24,4 +24,15 @@ public class SampleXxlJob {
         return ReturnT.SUCCESS;
 
     }
+
+    @XxlJob("failHandler")
+    public ReturnT<String> failHandler(String param) throws Exception {
+        XxlJobLogger.log(" >>用戶等級更新任務開始執行....");
+
+        String now = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        System.out.println(now + "XXL-JOB, fail...");
+
+        return ReturnT.FAIL;
+
+    }
 }

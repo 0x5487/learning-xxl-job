@@ -13,7 +13,7 @@ services:
       - ./mysql:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password
   xxljob01:
-    image: docker.io/xuxueli/xxl-job-admin:2.1.0
+    image: docker.io/xuxueli/xxl-job-admin:2.2.0
     container_name: xxljob01
     ports:
       - "8081:8080"
